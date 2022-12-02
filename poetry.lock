@@ -97,7 +97,7 @@ optional = false
 python-versions = "*"
 
 [package.extras]
-test = ["hypothesis (==3.55.3)", "flake8 (==3.7.8)"]
+test = ["flake8 (==3.7.8)", "hypothesis (==3.55.3)"]
 
 [[package]]
 name = "cryptography"
@@ -363,6 +363,18 @@ unidecode = ">=1.1"
 markdown = ["markdown (>=3.1)"]
 
 [[package]]
+name = "pillow"
+version = "9.3.0"
+description = "Python Imaging Library (Fork)"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+docs = ["furo", "olefile", "sphinx (>=2.4)", "sphinx-copybutton", "sphinx-issues (>=3.0.1)", "sphinx-removed-in", "sphinxext-opengraph"]
+tests = ["check-manifest", "coverage", "defusedxml", "markdown2", "olefile", "packaging", "pyroma", "pytest", "pytest-cov", "pytest-timeout"]
+
+[[package]]
 name = "pluggy"
 version = "1.0.0"
 description = "plugin and hook calling mechanisms for python"
@@ -371,8 +383,8 @@ optional = false
 python-versions = ">=3.6"
 
 [package.extras]
-testing = ["pytest-benchmark", "pytest"]
-dev = ["tox", "pre-commit"]
+dev = ["pre-commit", "tox"]
+testing = ["pytest", "pytest-benchmark"]
 
 [[package]]
 name = "pycparser"
@@ -615,7 +627,7 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "487d4bbf0bcb4085248e56c13b6761ea8c2265d0660af7ac6cf99d7f111f827a"
+content-hash = "f2eda0e4febaf64ad07c5c3d1d7002fa1291f9c41119469a2b984a55039634b2"
 
 [metadata.files]
 attrs = []
@@ -647,6 +659,7 @@ packaging = []
 paramiko = []
 pathlib2 = []
 pelican = []
+pillow = []
 pluggy = []
 pycparser = []
 pygame = []
