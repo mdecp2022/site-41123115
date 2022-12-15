@@ -142,7 +142,7 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">W10 << <a href='W10.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython<br /><h1>W6</h1>
-<p><a href="https://mdecp2022.github.io/site-41123115/content/Brython.html?src=https://gist.githubusercontent.com/41123115/388b1521c8f8d6c2e8d10cfd764e74f9/raw/af3d0a119378307ed7aedb06610a3fc557a5ec27/w6_hw">ex1</a></p>
+<p><a href="https://mdecp2022.github.io/site-41123115/content/Brython.html?src=https://gist.githubusercontent.com/41123115/388b1521c8f8d6c2e8d10cfd764e74f9/raw/6ea29afbc97edc50429214b13298ccbb59ec5ef5/w6_hw&amp;src2=https://gist.githubusercontent.com/41123115/388b1521c8f8d6c2e8d10cfd764e74f9/raw/6ea29afbc97edc50429214b13298ccbb59ec5ef5/list_1a_static_site.py">ex1,2</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">#用import導入random模組
 import random
 cp1a = "0747"
@@ -159,8 +159,32 @@ num = 5
 
 for i in range(num):
     print(stud[i])</pre>
-<p></p>
-<br />W10 << <a href='W10.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython</div>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import document, html
+
+brython_div1 = document["brython_div1"]
+"""
+brython_div1 &lt;= html.BUTTON("hello")
+brython_div1 &lt;= html.BR()
+brython_div1 &lt;= html.A("google", href="https://google.com")
+"""
+
+url = "https://mde.tw/studlist/2022fall/1a.txt"
+data = open(url).read().split("\n")
+mdecp2022 = "https://mdecp2022.github.io/site-"
+data = data[1:-1]
+for i in data:
+    stud = i.split("\t")
+    stud_num = stud[0]
+    github_acc = stud[1]
+    #print(stud_num, github_acc)
+    if github_acc == "":
+        github_acc = stud_num
+    site = mdecp2022 + github_acc
+    link = html.A(stud_num, href=site)
+    brython_div1 &lt;= link
+    brython_div1 &lt;= html.BR()</pre>
+<p><br/><br/><br/></p>
+<p></p><br />W10 << <a href='W10.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython</div>
         
     <!-- footer -->
       <div class="container">
