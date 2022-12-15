@@ -36,6 +36,24 @@ print("攝氏 " + str(user_input_temp) + " 度, 等於華氏 " + str(Fahrenheit)
 <p><a href="https://mdecp2022.github.io/site-41123115/content/Brython.html?src=https://gist.githubusercontent.com/41123115/5b0a216ea7f02db88335bda20a220925/raw/1dfa285641e287e13a18753b471cffa40fb693a1/w10_hw">ex</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">for i in range(1, 10, 2):
     print(i)</pre>
+<h2>W6</h2>
+<p><a href="https://mdecp2022.github.io/site-41123115/content/Brython.html?src=https://gist.githubusercontent.com/41123115/388b1521c8f8d6c2e8d10cfd764e74f9/raw/af3d0a119378307ed7aedb06610a3fc557a5ec27/w6_hw">ex1</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">#用import導入random模組
+import random
+cp1a = "0747"
+# cp2022 1a 選課成員名單
+url = "https://nfu.cycu.org/?semester=1111&amp;courseno=" + cp1a + "&amp;column=True"
+
+data = open(url).read().split("\n")
+
+stud = data[:-1]
+# 使用random中的shuffle()函式, stud代表隨機排列
+random.shuffle(stud)
+
+num = 5
+
+for i in range(num):
+    print(stud[i])</pre>
 <p></p>
 <h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
