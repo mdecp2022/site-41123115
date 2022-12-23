@@ -7,7 +7,8 @@
 <p>A:https:s代表secure的意思,通訊過程是用SSL/TLS加密<br/>A:ssh:加密客戶端與伺服器之間的傳輸,在陌生地方可以安全的傳輸資料</p>
 <p><strong>5.Brython 與 Python 有甚麼差別?</strong></p>
 <p>A:Brython年代較早無法完全支援Python,但是Brython可以在網站上使用Python<br/> <br/><strong>6.能夠直接在瀏覽器中以 Brython 繪製中華民國國旗, 或模擬綠色方塊在方塊格點中任意移動, 代表甚麼?</strong><br/>A:代表程式沒有問題<br/> <br/><strong>7.變數, 字串, 整數, 浮點數, 數列, Tuple, Dictionary, 函式, 重複迴圈, class, 物件導向, 資料庫, 這些名詞對您而言代表甚麼?</strong><br/>A:代表程式語言</p>
-<p></p><h2>W13</h2>
+<p></p>
+<h2>W13</h2>
 <p><a href="https://mdecp2022.github.io/site-shimo9891/content/Brython.html?src=https://gist.githubusercontent.com/41123115/16373310ff0510eee0b187642a9a8529/raw/8c2fc762cbeaf75abf5aea0a7b6dce938aa1f6bd/w13_temp_convert_ex2.py">ex2</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">'''
 f = c*9/5 + 32
@@ -129,6 +130,24 @@ for i in data:
     link = html.A(stud_num, href=site)
     brython_div1 &lt;= link
     brython_div1 &lt;= html.BR()</pre>
+<h2>W5</h2>
+<p><a href="https://mdecp2022.github.io/site-41123115/content/Brython.html?src=https://gist.githubusercontent.com/41123115/ccabd003298ec51e6ecf6d18db9d1c29/raw/ba35d2d22500d8b01aa625d51f7caf2b7f434c22/w5_hw">亂數產生器</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import random
+
+import string
+# 利用 def 關鍵字定義函式
+# 函式的輸入變數可以設定初始值
+def password_generator(size=4, chars=string.ascii_lowercase + string.digits):
+    # 函式內以多行註解說明函式功能
+    """Generate random password
+    """
+    # 利用 return 關鍵字將所產生的亂數字串傳回
+    return ''.join(random.choice(chars) for _ in range(size))
+# 建立一個變數與隨後的字串對應
+pass_string = "abcdefghkmnpqrstuwxyz123456789"
+# 利用重複迴圈呼叫函式 10 次
+for i in range(10):
+    print(password_generator(4, pass_string))</pre>
 <p><br/><br/><br/></p>
 <p></p>
 <h1>Brython</h1>
